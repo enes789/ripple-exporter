@@ -5,7 +5,7 @@ services:
     build: build_src
     restart: always
     ports:
-      - "9093:5000"
+      - "5000:5000"
     logging:
       driver: "json-file"
       options:
