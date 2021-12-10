@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  xrp_exporter:
+    container_name: xrp-exporter
+    build: build_src
+    restart: always
+    ports:
+      - "9093:5000"
+    logging:
+      driver: "json-file"
+      options:
+        tag: "{{.Name}}"
